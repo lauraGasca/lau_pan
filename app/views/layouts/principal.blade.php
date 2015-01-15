@@ -36,15 +36,6 @@
     </head>
     <body class="home">
 
-    <!-- PRELOADER -->
-    <div class="preloader">
-        <div class="inner">
-            <div class="item item1"></div>
-            <div class="item item2"></div>
-            <div class="item item3"></div>
-        </div>
-    </div>
-    <!-- END / PRELOADER -->
 
     <!-- PAGE WRAP -->
     <div id="page-wrap">
