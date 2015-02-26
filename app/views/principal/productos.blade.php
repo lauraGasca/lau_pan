@@ -14,10 +14,10 @@
         <div class="tabs-menu tabs-page">
             <div class="container">
                 <ul class="nav-tabs text-center" role="tablist">
-                    <li @if($categoria==null) class="active" @endif ><a href="{{url('/productos')}}" role="tab" data-toggle="tab">Linea Tradicional</a></li>
-                    <li @if($categoria=='integral') class="active" @endif ><a href="{{url('/productos/integral')}}" role="tab" data-toggle="tab">Linea Integral</a></li>
-                    <li @if($categoria=='especial') class="active" @endif ><a href="{{url('/productos/especial')}}" role="tab" data-toggle="tab">Linea Especial</a></li>
-                    <li @if($categoria=='peques') class="active" @endif ><a href="{{url('/productos/peques')}}" role="tab" data-toggle="tab">Para los Peques</a></li>
+                    <li @if($categoria==null) class="active" @endif ><a href="{{url('/productos')}}">Linea Tradicional</a></li>
+                    <li @if($categoria=='integral') class="active" @endif ><a href="{{url('/productos/integral')}}">Linea Integral</a></li>
+                    <li @if($categoria=='especial') class="active" @endif ><a href="{{url('/productos/especial')}}">Linea Especial</a></li>
+                    <li @if($categoria=='peques') class="active" @endif ><a href="{{url('/productos/peques')}}">Para los Peques</a></li>
                 </ul>
             </div>
         </div>
