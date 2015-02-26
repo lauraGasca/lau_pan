@@ -33,7 +33,7 @@
                     <i class="icon awe_quote_right"></i>
                 </div>
                 <p>La ciudad fue fundada oficialmente el 19 de Septiembre de 1526 por el cacique Don Nicolás de San Luis Montañés, con el nombre de San Francisco de Acámbaro.</p>
-                <a href="{{url('/mistica')}}" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">Mistica</a>
+                <a href="{{url('/nosotros')}}" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">Nosotros</a>
             </div>
         </div>
 
@@ -42,28 +42,63 @@
     <!-- END / GOOD FOOD -->
 
     <!-- TESTIMONIAL -->
-    <section id="testimonial" class="testimonial testimonial-1 section">
+    <section id="testimonial" class="testimonial testimonial-2 section">
+
         <!-- BACKGROUND -->
         <div class="awe-parallax bg-2"></div>
         <!-- END / BACKGROUND -->
 
-        <!-- OVERLAY -->
-        <div class="awe-overlay"></div>
-        <!-- END / OVERLAY -->
+        <div class="divider divider-2"></div>
 
         <div class="container">
-            <div class="testimonial-content">
-                <div class="icon-head">
-                    <i class="icon awe_quote_left"></i>
-                </div>
-
-                <blockquote>
-                    <p>No se trata de nutrientes y calorías.</p>
-                    <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
-                    <div class="test-footer text-right">
-                        <span class="sm">Robert Smith</span>
+            <div class="testimonial-slider text-center">
+                <!-- ITEM -->
+                <div class="item">
+                    <div class="icon-head">
+                        <i class="icon awe_quote_left"></i>
                     </div>
-                </blockquote>
+
+                    <blockquote>
+                        <p>No se trata de nutrientes y calorías.</p>
+                        <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
+                        <div class="test-footer">
+                            <span class="sm">Robert Smith</span>
+                        </div>
+                    </blockquote>
+                </div>
+                <!-- END / ITEM -->
+
+                <!-- ITEM -->
+                <div class="item">
+                    <div class="icon-head">
+                        <i class="icon awe_quote_left"></i>
+                    </div>
+
+                    <blockquote>
+                        <p>No se trata de nutrientes y calorías.</p>
+                        <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
+                        <div class="test-footer">
+                            <span class="sm">Robert Smith</span>
+                        </div>
+                    </blockquote>
+                </div>
+                <!-- END / ITEM -->
+
+                <!-- ITEM -->
+                <div class="item">
+                    <div class="icon-head">
+                        <i class="icon awe_quote_left"></i>
+                    </div>
+
+                    <blockquote>
+                        <p>No se trata de nutrientes y calorías.</p>
+                        <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
+                        <div class="test-footer">
+                            <span class="sm">Robert Smith</span>
+                        </div>
+                    </blockquote>
+                </div>
+                <!-- END / ITEM -->
             </div>
         </div>
     </section>
@@ -82,7 +117,6 @@
                         <div class="text-wrap">
                             <p>En 1976, Samuel Silva desarrolla una nueva fórmula y una nueva figura con el nombre de “ACAMBARITAS”, que a pesar de la enorme variedad de panes que hay en la panadería mexicana, es única y actualmente de marcada preferencia popular. </p>
                         </div>
-                        <a href="{{url('/productos')}}" class="awe-btn awe-btn-2 awe-btn-ar text-uppercase">Nuestros Productos</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-md-offset-1">
@@ -132,21 +166,7 @@
     <section class="section-highlight section">
         <div class="divider divider-2 divider-color"></div>
         <div class="awe-color"></div>
-        <div class="container">
-            <div class="highlight-content tb">
-                <!--<div class="tb-cell">
-                    <p>Why don’t find a table and save it now? Find a table and We have discount for you!</p>
-                </div>
-                <div class="links tb-cell">
-                    <div class="reservation-link">
-                        <a href="reservation.html" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">RESERVATION</a>
-                    </div>
-                    <div class="shop-delivery-link">
-                        <a href="shop.html" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">SHOP DELIVERY</a>
-                    </div>
-                </div>-->
-            </div>
-        </div>
+        <div class="container"><div class="highlight-content tb"></div></div>
     </section>
     <!-- END / SECTION HIGHLIGHT -->
 
@@ -165,10 +185,7 @@
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="blog-single.html">AWARD WINNING CHEF</a></h2>
-                            </div>
-                            <div class="post-content">
-                                <p>Macaroon croissant pudding sweet roll. Jelly candy tootsie</p>
+                                <h2 class="text-uppercase"><a href="{{url('/productos')}}">Nuestros Productos</a></h2>
                             </div>
                         </div>
                     </div>
@@ -181,7 +198,7 @@
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="blog-single.html">A MULTI-POST STORY</a></h2>
+                                <h2 class="text-uppercase"><a href="{{url('/productos')}}">Linea Tradicional</a></h2>
                             </div>
                         </div>
                     </div>
@@ -194,7 +211,7 @@
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="blog-single.html">HOW TO USE CHOPSTICKS</a></h2>
+                                <h2 class="text-uppercase"><a href="{{url('/productos/integral')}}">Linea Integral</a></h2>
                             </div>
                         </div>
                     </div>
@@ -207,7 +224,7 @@
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="blog-single.html">PHASELLUS JUSTO MAURIS, TEMPUS EGET NISL SIT</a></h2>
+                                <h2 class="text-uppercase"><a href="{{url('/productos/especial')}}">Linea Especial</a></h2>
                             </div>
                         </div>
                     </div>
@@ -220,7 +237,7 @@
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="blog-single.html">A MULTI-POST STORY</a></h2>
+                                <h2 class="text-uppercase"><a href="{{url('/productos/peques')}}">Para los Peques</a></h2>
                             </div>
                         </div>
 
@@ -228,11 +245,6 @@
                     <!-- END / BLOG POST -->
                 </div>
             </div>
-
-            <div class="loadmore text-center">
-                <a href="#" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">LOAD MORE POSTS</a>
-            </div>
-
         </div>
     </section>
     <!-- END / SECTION BLOG -->
@@ -305,6 +317,9 @@
                             <p>Suscribete para recibir en tu correo nuestras actualizaciones</p>
                         </div>
                         <form>
+                            <div class="form-item">
+                                <input type="text" placeholder="Nombre Completo" class="text-uppercase" name="nombre">
+                            </div>
                             <div class="form-item">
                                 <input type="text" placeholder="Correo Electronico" class="text-uppercase" name="email">
                             </div>

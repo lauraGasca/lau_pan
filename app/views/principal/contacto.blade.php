@@ -106,6 +106,9 @@
                         </div>
                         <form>
                             <div class="form-item">
+                                <input type="text" placeholder="Nombre Completo" class="text-uppercase" name="nombre">
+                            </div>
+                            <div class="form-item">
                                 <input type="text" placeholder="Correo Electronico" class="text-uppercase" name="email">
                             </div>
                             <div class="form-actions">

@@ -10,14 +10,14 @@ class PrincipalController extends BaseController{
         $this->layout->content = View::make('principal.index');
     }
 
-    public function getMistica()
+    public function getNosotros()
     {
         $this->layout->content = View::make('principal.mistica');
     }
 
-    public function getProductos()
+    public function getProductos($categoria=null)
     {
-        $this->layout->content = View::make('principal.productos');
+        $this->layout->content = View::make('principal.productos', compact('categoria'));
     }
 
     /*public function getReservacion()

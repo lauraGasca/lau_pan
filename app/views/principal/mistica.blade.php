@@ -4,7 +4,7 @@
     <section class="sub-banner text-center section">
         <div class="awe-parallax bg-5"></div>
         <div class="awe-title awe-title-3">
-            <h3 class="lg text-uppercase">Mistica</h3>
+            <h3 class="lg text-uppercase">Nosotros</h3>
         </div>
     </section>
     <!-- END / SUB BANNER -->
