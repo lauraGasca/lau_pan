@@ -2622,7 +2622,7 @@ header.header .container > .minicart-wrap .minicart-body {
 }
 
 .the-menu-item .the-menu-body p {
-    height: 75px;
+    height: 100px;
     overflow: hidden
 }
 
@@ -4219,6 +4219,11 @@ header.header .container > .minicart-wrap .minicart-body {
     text-align: center
 }
 
+.message-error{
+    color: rgb(224, 70, 70);
+    font-weight: bold;
+}
+
 .contact-form .inner {
     max-width: 700px;
     margin: auto
@@ -4241,7 +4246,7 @@ header.header .container > .minicart-wrap .minicart-body {
     padding: 15px
 }
 
-.contact-form .form-item input[type=number], .contact-form .form-item input[type=password], .contact-form .form-item input[type=text] {
+.contact-form .form-item input[type=number], .contact-form .form-item input[type=password], .contact-form .form-item input[type=text], .contact-form .form-item input[type=email]{
     background-color: #262626;
     font-family: "Quattrocento Sans", sans-serif;
     font-size: 16px;
@@ -4265,7 +4270,7 @@ header.header .container > .minicart-wrap .minicart-body {
     padding-bottom: 75px
 }
 
-.contact-form.contact-form-2 input[type=number], .contact-form.contact-form-2 input[type=password], .contact-form.contact-form-2 input[type=text], .contact-form.contact-form-2 textarea {
+.contact-form.contact-form-2 input[type=number], .contact-form.contact-form-2 input[type=password], .contact-form.contact-form-2 input[type=text], .contact-form.contact-form-2 input[type=email], .contact-form.contact-form-2 textarea {
     background-color: #eee;
     color: #000
 }
@@ -4375,7 +4380,7 @@ header.header .container > .minicart-wrap .minicart-body {
 }
 
 .news-letter .form-item, .news-letter .letter-heading p {
-    margin-top: 35px
+    margin-top: 15px
 }
 
 .news-letter .form-item input {

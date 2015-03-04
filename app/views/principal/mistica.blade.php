@@ -1,3 +1,7 @@
+@section('titulo')
+    El triunfo | Nosotros
+@show
+
 @section('contenido')
 
     <!-- SUB BANNER -->

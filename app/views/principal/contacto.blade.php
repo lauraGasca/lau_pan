@@ -1,3 +1,7 @@
+@section('titulo')
+    El triunfo | Contactanos
+@show
+
 @section('contenido')
     <!-- SUB BANNER -->
     <section class="sub-banner text-center section">
@@ -14,6 +18,24 @@
         <div class="contact-form contact-form-2">
             <div class="divider divider-2"></div>
             <div class="container">
+                @if(count($errors)>0)
+                    <div class="alert alert-danger alert-block fade in alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>¡Por favor!</strong> Revise los datos del formulario.</a>
+                    </div>
+                @endif
+                @if(Session::get('correo'))
+                    <div class="alert alert-success alert-bold-border square fade in alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>¡Gracias por contactarnos!</strong> Contestaremos tu correo lo m&aacute;s pronto posible.</a>
+                    </div>
+                @endif
+                @if(Session::get('confirm'))
+                    <div class="alert alert-success alert-bold-border square fade in alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>¡Gracias por suscribirte!</strong> Pronto recibiras nuestras actualizaciones.</a>
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-md-4">
                         <address class="find-us">
@@ -42,21 +64,23 @@
                     </div>
                     <div class="col-md-8">
                         <div class="form-row">
-                            <form id="send-message-form" action="http://envato.megadrupal.com/html/ambrosia/processContact.php" method="post">
+                            {{ Form::open(array('url'=>'contacto', 'method' => 'post') )}}
                                 <div class="form-item form-textarea">
-                                    <textarea placeholder="Mensaje" name="message"></textarea>
+                                    {{ Form::textarea('mensaje', null, array('placeholder'=>'Mensaje')) }}
+                                    <span class="message-error">{{$errors->first('mensaje')}}</span>
                                 </div>
-                                <div class="form-item form-type-name">
-                                    <input type="text" placeholder="Nombre" name="name">
-                                </div>
-                                <div class="form-item form-type-email">
-                                    <input type="text" placeholder="Correo" name="email">
-                                </div>
-                                <div class="form-actions">
-                                    <input type="submit" value="Enviar" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">
-                                </div>
-                                <div id="contact-content"></div>
-                            </form>
+                            <div class="form-item form-type-name">
+                                {{Form::text('nombre', null, array('placeholder'=>'Nombre'))}}
+                                <span class="message-error">{{$errors->first('nombre')}}</span>
+                            </div>
+                            <div class="form-item form-type-email">
+                                {{Form::email('correo', null, array('placeholder'=>'Correo'))}}
+                                <span class="message-error">{{$errors->first('correo')}}</span>
+                            </div>
+                            <div class="form-actions">
+                                <input type="submit" value="Enviar" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">
+                            </div>
+                            {{Form::close()}}
                         </div>
                     </div>
                 </div>
@@ -64,11 +88,7 @@
         </div>
 
         <div class="contact-first">
-
-            <!-- OVERLAY -->
             <div class="awe-overlay overlay-default"></div>
-            <!-- END / OVERLAY -->
-
             <div class="section-content">
                 <div class="container">
                     <div class="row">
@@ -104,17 +124,19 @@
                             <h4 class="sm text-uppercase">Recibe actualizaciones</h4>
                             <p>Suscribete para recibir en tu correo nuestras actualizaciones</p>
                         </div>
-                        <form>
+                        {{ Form::open(array('url'=>'suscribir', 'method' => 'post') )}}
                             <div class="form-item">
-                                <input type="text" placeholder="Nombre Completo" class="text-uppercase" name="nombre">
+                                {{Form::text('nombre_completo', null, array('placeholder'=>'Nombre Completo', 'class'=>"text-uppercase"))}}
+                                <span class="message-error">{{$errors->first('nombre_completo')}}</span>
                             </div>
                             <div class="form-item">
-                                <input type="text" placeholder="Correo Electronico" class="text-uppercase" name="email">
+                                {{Form::email('email', null, array('placeholder'=>'Correo Electronico', 'class'=>"text-uppercase"))}}
+                                <span class="message-error">{{$errors->first('email')}}</span>
                             </div>
                             <div class="form-actions">
                                 <input type="submit" value="Suscribirse" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">
                             </div>
-                        </form>
+                        {{Form::close()}}
                     </div>
                 </div>
             </div>

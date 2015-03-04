@@ -1,3 +1,7 @@
+@section('titulo')
+    El triunfo | Productos
+@show
+
 @section('contenido')
 
     <!-- SUB BANNER -->
