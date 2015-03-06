@@ -26,14 +26,22 @@ class ValidatorManager
             case 'correo':
                 $rules = [
                     'asunto' =>  'required|max:100',
-                    'correos' =>  'required',
-                    'archivo' =>  'required',
-                    'mensaje' =>  'required|max:500'
+                    'archivo' =>  'required|image'
                 ];
                 break;
             case 'producto':
                 $rules = [
                     'id' =>  'required|exists:productos,id'
+                ];
+                break;
+            case 'frase':
+                $rules = [
+                    'id' =>  'required|exists:frases,id'
+                ];
+                break;
+            case 'suscripcion':
+                $rules = [
+                    'id' =>  'required|exists:suscripciones,id'
                 ];
                 break;
         }

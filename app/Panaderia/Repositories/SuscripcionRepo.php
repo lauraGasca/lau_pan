@@ -17,6 +17,17 @@ class SuscripcionRepo extends BaseRepo
 
     public function suscripciones()
     {
-        return Suscripcion::lists('nombre_completo', 'email');
+        return Suscripcion::all();
+    }
+
+    public function suscripciones_mail()
+    {
+        return Suscripcion::lists('email');
+    }
+
+    public function deleteSuscripcion($id)
+    {
+        $suscripcion = Suscripcion::find($id);
+        $suscripcion->delete();
     }
 }

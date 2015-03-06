@@ -12,19 +12,20 @@
                 El triunfo
             @show
         </title>
-        <!-- BOOTSTRAP CSS (REQUIRED ALL PAGE)-->
-        {{ HTML::style('/css-sentir/bootstrap.min.css') }}
-        <!-- MAIN CSS (REQUIRED ALL PAGE)-->
-        {{ HTML::style('/css-sentir/font-awesome.css') }}
-        {{ HTML::style('/css-sentir/style.css') }}
-        {{ HTML::style('/css-sentir/style-responsive.css') }}
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        {{ HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}
-        {{ HTML::script('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') }}
-        <![endif]-->
-
-        <link rel="shortcut icon" href="{{ asset('images/logoB.png') }}">
+        @section('css')
+            <!-- BOOTSTRAP CSS (REQUIRED ALL PAGE)-->
+            {{ HTML::style('/css-sentir/bootstrap.min.css') }}
+            <!-- MAIN CSS (REQUIRED ALL PAGE)-->
+            {{ HTML::style('/css-sentir/font-awesome.css') }}
+            {{ HTML::style('/css-sentir/style.css') }}
+            {{ HTML::style('/css-sentir/style-responsive.css') }}
+            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+            {{ HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}
+            {{ HTML::script('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') }}
+            <![endif]-->
+            <link rel="shortcut icon" href="{{ asset('images/logoB.png') }}">
+        @show
     </head>
 
     <body class="tooltips">
@@ -45,7 +46,7 @@
                         <li class="dropdown">
                             <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown">
                                 {{ HTML::image('images/logo.png', 'Logo', ['style'=>"height: 30px;"]) }}
-                                <strong>Configuraci&oacute;n</strong>
+                                <strong>Opciones</strong>
                             </a>
                             <ul class="dropdown-menu square primary margin-list-rounded with-triangle">
                                 <!--<li><a href="#fakelink">Cambiar Contrase&ntilde;a</a></li>
@@ -58,8 +59,9 @@
             </div>
             <div class="sidebar-left sidebar-nicescroller">
                 <ul class="sidebar-menu">
-                    <li><a href="{{url('inicio')}}"><i class="fa fa-send icon-sidebar"></i>Suscripciones</a></li>
+                    <li><a href="{{url('suscripciones')}}"><i class="fa fa-send icon-sidebar"></i>Suscripciones</a></li>
                     <li><a href="{{url('producto')}}"><i class="fa fa-cubes icon-sidebar"></i>Productos</a></li>
+                    <li><a href="{{url('frases')}}"><i class="fa fa-paragraph icon-sidebar"></i>Frases</a></li>
                 </ul>
             </div>
             <div class="page-content">

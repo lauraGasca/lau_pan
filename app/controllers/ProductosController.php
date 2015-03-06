@@ -21,12 +21,12 @@ class ProductosController extends BaseController
     public function getIndex()
     {
         $productos = $this->productoRepo->productos();
-        $this->layout->content = View::make('sistema.productos', compact('productos'));
+        $this->layout->content = View::make('productos.index', compact('productos'));
     }
 
     public function getCrear()
     {
-        $this->layout->content = View::make('sistema.create');
+        $this->layout->content = View::make('productos.create');
     }
 
     public function postCrear()
@@ -42,7 +42,7 @@ class ProductosController extends BaseController
     public function getUpdate($id)
     {
         $producto = $this->productoRepo->producto($id);
-        $this->layout->content = View::make('sistema.update', compact('producto'));
+        $this->layout->content = View::make('productos.update', compact('producto'));
     }
 
     public function postUpdate()

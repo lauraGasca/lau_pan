@@ -27,7 +27,7 @@
                     <i class="icon awe_quote_right"></i>
                 </div>
                 <p>La ciudad fue fundada oficialmente el 19 de Septiembre de 1526 por el cacique Don Nicolás de San Luis Montañés, con el nombre de San Francisco de Acámbaro.</p>
-                <a href="{{url('/nosotros')}}" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">Nosotros</a>
+                <a href="{{url('nosotros')}}" class="awe-btn awe-btn-2 awe-btn-default text-uppercase">Nosotros</a>
             </div>
         </div>
         <div class="divider divider-2"></div>
@@ -37,42 +37,19 @@
         <div class="divider divider-2"></div>
         <div class="container">
             <div class="testimonial-slider text-center">
-                <div class="item">
-                    <div class="icon-head">
-                        <i class="icon awe_quote_left"></i>
-                    </div>
-                    <blockquote>
-                        <p>No se trata de nutrientes y calorías.</p>
-                        <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
-                        <div class="test-footer">
-                            <span class="sm">Robert Smith</span>
+                @foreach($frases as $frase)
+                    <div class="item">
+                        <div class="icon-head">
+                            <i class="icon awe_quote_left"></i>
                         </div>
-                    </blockquote>
-                </div>
-                <div class="item">
-                    <div class="icon-head">
-                        <i class="icon awe_quote_left"></i>
+                        <blockquote>
+                            <p>{{$frase->frase}}</p>
+                            <div class="test-footer">
+                                <span class="sm">{{$frase->autor}}</span>
+                            </div>
+                        </blockquote>
                     </div>
-                    <blockquote>
-                        <p>No se trata de nutrientes y calorías.</p>
-                        <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
-                        <div class="test-footer">
-                            <span class="sm">Robert Smith</span>
-                        </div>
-                    </blockquote>
-                </div>
-                <div class="item">
-                    <div class="icon-head">
-                        <i class="icon awe_quote_left"></i>
-                    </div>
-                    <blockquote>
-                        <p>No se trata de nutrientes y calorías.</p>
-                        <span>Se trata de compartir. Se trata de la honestidad. Se trata de la identidad.</span>
-                        <div class="test-footer">
-                            <span class="sm">Robert Smith</span>
-                        </div>
-                    </blockquote>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -95,22 +72,22 @@
                         <div class="row">
                             <div class="col-xs-5">
                                 <div class="fastfood-item">
-                                    <img src="images/fastfood/img-1.jpg" alt="">
+                                    {{ HTML::image('images/fastfood/img-1.jpg') }}
                                 </div>
                             </div>
                             <div class="col-xs-5">
                                 <div class="fastfood-item">
-                                    <img src="images/fastfood/img-2.jpg" alt="">
+                                    {{ HTML::image('images/fastfood/img-2.jpg') }}
                                 </div>
                             </div>
                             <div class="col-xs-5">
                                 <div class="fastfood-item">
-                                    <img src="images/fastfood/img-3.jpg" alt="">
+                                    {{ HTML::image('images/fastfood/img-3.jpg') }}
                                 </div>
                             </div>
                             <div class="col-xs-5">
                                 <div class="fastfood-item">
-                                    <img src="images/fastfood/img-4.jpg" alt="">
+                                    {{ HTML::image('images/fastfood/img-4.jpg') }}
                                 </div>
                             </div>
                         </div>
@@ -132,51 +109,51 @@
                     <div class="grid-sizer"></div>
                     <div class="post post-single w2">
                         <div class="post-media">
-                            <img src="images/blog/img-1.jpg" alt="">
+                            {{ HTML::image('images/blog/img-1.jpg') }}
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="{{url('/productos')}}">Nuestros Productos</a></h2>
+                                <h2 class="text-uppercase">{{ HTML::link('productos', 'Nuestros Productos') }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="post post-single">
                         <div class="post-media">
-                            <img src="images/blog/img-2.jpg" alt="">
+                            {{ HTML::image('images/blog/img-2.jpg') }}
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="{{url('/productos')}}">Linea Tradicional</a></h2>
+                                <h2 class="text-uppercase">{{ HTML::link('productos', 'Linea Tradicional') }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="post post-single">
                         <div class="post-media">
-                            <img src="images/blog/img-3.jpg" alt="">
+                            {{ HTML::image('images/blog/img-3.jpg') }}
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="{{url('/productos/integral')}}">Linea Integral</a></h2>
+                                <h2 class="text-uppercase">{{ HTML::link('productos/integral', 'Linea Integral') }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="post post-single">
                         <div class="post-media">
-                            <img src="images/blog/img-4.jpg" alt="">
+                            {{ HTML::image('images/blog/img-4.jpg') }}
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="{{url('/productos/especial')}}">Linea Especial</a></h2>
+                                <h2 class="text-uppercase">{{ HTML::link('productos/especial', 'Linea Especial') }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="post post-single">
                         <div class="post-media">
-                            <img src="images/blog/img-12.jpg" alt="">
+                            {{ HTML::image('images/blog/img-12.jpg') }}
                         </div>
                         <div class="post-body">
                             <div class="post-title">
-                                <h2 class="text-uppercase"><a href="{{url('/productos/peques')}}">Para los Peques</a></h2>
+                                <h2 class="text-uppercase">{{ HTML::link('productos/peques', 'Para los Peques') }}</h2>
                             </div>
                         </div>
                     </div>
@@ -208,7 +185,7 @@
             </div>
             <div id="map" data-map-zoom="14" data-map-latlng="20.0338901, -100.7235857" data-snazzy-map-theme="grayscale" data-map-marker="images/marker.png" data-map-marker-size="200*60">            </div>
         </div>
-        @if(count($errors)>0||Session::get('correo'))
+        @if(count($errors)>0||Session::get('correo')||Session::get('confirm'))
             <script>
                 location.href = "#formularios"
             </script>
@@ -250,6 +227,12 @@
                             <h4 class="sm text-uppercase">Recibe actualizaciones</h4>
                             <p>Suscribete para recibir en tu correo nuestras actualizaciones</p>
                         </div>
+                        @if(Session::get('confirm'))
+                            <div class="alert alert-success alert-bold-border square fade in alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <strong>¡Gracias por suscribirte!</strong> Muy pronto empezaras a recibir nuestras actualizaciones.</a>
+                            </div>
+                        @endif
                         {{ Form::open(array('url'=>'suscribir', 'method' => 'post') )}}
                             <div class="form-item">
                                 {{Form::text('nombre_completo', null, array('placeholder'=>'Nombre Completo', 'class'=>"text-uppercase"))}}

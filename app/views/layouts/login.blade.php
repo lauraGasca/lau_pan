@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="Panaderia el triunfo.">
-        <meta name="keywords" content="panaderias, panes, triunfo, acambaro, guanajuato">
+        <meta name="keywords" content="panaderias, panes, panaderia, el triunfo, acambaro, guanajuato">
         <meta name="author" content="Incubamas">
         <title>El triunfo | Iniciar Sesion</title>
         <!-- BOOTSTRAP CSS (REQUIRED ALL PAGE)-->

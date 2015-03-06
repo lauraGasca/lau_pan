@@ -8,6 +8,7 @@ Route::get('contacto', ['as' => 'home', 'uses' =>'PrincipalController@getContact
 Route::post('contacto', ['as' => 'home', 'uses' =>'PrincipalController@postContacto']);
 Route::post('suscribir', ['as' => 'home', 'uses' =>'PrincipalController@postSuscribir']);
 
-Route::controller('sistema', 'LoginController');
-Route::controller('inicio', 'SistemaController');
+Route::controller('sistema', 'SistemaController');
+Route::controller('suscripciones', 'SuscripcionController');
 Route::controller('producto', 'ProductosController');
+Route::controller('frases', 'FraseController');

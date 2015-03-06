@@ -21,6 +21,11 @@ class ProductoRepo extends BaseRepo
         return $producto;
     }
 
+    public function productos_cat($categoria)
+    {
+        return Producto::whereRaw('categoria LIKE "%'.$categoria.'%"')->get();
+    }
+
     public function productos()
     {
         return Producto::paginate(10);
@@ -42,6 +47,6 @@ class ProductoRepo extends BaseRepo
 
     public function deleteFoto($foto)
     {
-        \File::delete(public_path() . '\\images\\panes\\' . $foto);
+        \File::delete(public_path() . '/images/panes/'.$foto);
     }
 }
