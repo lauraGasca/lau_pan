@@ -5,6 +5,9 @@ public/error_log
 .env.local.php
 /bootstrap/compiled.php
 /vendor
+/public_html
+/public
+/boobstrap/paths.php
 composer.phar
 composer.lock  # Remove this one after you create a project
 .env.php

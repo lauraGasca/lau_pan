@@ -17,14 +17,6 @@ class SistemaController extends BaseController
         return View::make('layouts.login');
     }
 
-    public function getPrueba()
-    {
-        $user = $this->userRepo->newUser();
-        $user->user = 'triunfo';
-        $user->password = 'triunfo612';
-        $user->save();
-    }
-
     public function postLogin()
     {
         $data = Input::all();
@@ -33,7 +25,7 @@ class SistemaController extends BaseController
 
         if (Auth::attempt($credentials, Input::get('remember')))
         {
-            return Redirect::to('inicio');
+            return Redirect::to('suscripciones');
         }
         return Redirect::back()->with('login_errors', true)->withInput();
 
