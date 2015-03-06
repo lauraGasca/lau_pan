@@ -78,7 +78,6 @@ class SuscripcionController extends BaseController
             ['imagen' => $imagen],
             function ($message) use ($asunto, $suscripciones) {
                 $message->subject($asunto);
-                $message->to('lau_lost@hotmail.com', 'El Triunfo');
                 $message->bcc($suscripciones);
             });
         return Redirect::to('suscripciones')->with(array('confirm' => 'Se a enviado correctamente.'));
